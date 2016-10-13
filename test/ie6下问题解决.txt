@@ -1,0 +1,37 @@
+1、ie6下，对png图片不支持
+
+	解决方法：
+
+	<!--[if IE 6]>
+
+		<script src="js/DD_belatedPNG_0.0.8a.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+			DD_belatedPNG.fix('*');
+		</script>
+
+	<![endif]-->
+
+	对个别png图片格式显示仍有问题，可将其改为gif格式。
+
+2、ie6中，对 line-height=height 进行垂直居中时，对<img>图片居中无效
+
+	解决方法：
+	
+	先将图片元素<img>转换为块元素（方法：1、浮动 float:left ;2、display:block;等等...）
+	
+	用margin-top 或 相对定位 position : relative; top:**px 重新设置<img>位置
+
+	解决兼容性问题尽量不用 css hack.
+
+3、ie6中，文本输入框<input type="text" >中内容不垂直居中
+
+	解决方法：
+
+	line-height=height 行高等于元素高度
+
+4、导航栏中，<a>标签中内容，鼠标移过时，鼠标不是手的形状
+
+	解决方法：
+
+	<a>加样式：cursor:pointer;
